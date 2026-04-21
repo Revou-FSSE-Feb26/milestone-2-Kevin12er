@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+body {
+    background-image: url('../Images/Gamebg.jpg');
+    background-size: cover;
+}
+
+@theme {
+            --font-pixel: "Pixelify Sans", sans-serif;
+
+            @keyframes typing {
+                from {width: 0;}
+                to {width: 100%}
+            }
+
+            @keyframes blink {
+                50% {border-color: transparent}
+            }
+
+            --animate-typing: typing 4s steps(30) infinite alternate, blink .7s step-end infinite;
+        }

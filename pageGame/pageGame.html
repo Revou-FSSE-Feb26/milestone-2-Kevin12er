@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Belajar Tailwind</title>
+    <link rel="stylesheet" href="../dist/output.css">
+
+    <!-- Font pixel -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
+    <!-- Font pixel -->
+
+</head>
+
+<body class="bg-[url('../Images/Gamebg.jpg')] bg-cover bg-no-repeat bg-blend-multiply bg-slate-700 min-h-screen">
+    
+    <h1 class="font-pixel text-white text-sm md:text-5xl text-center capitalize py-4">
+        Selamat bermain
+    </h1>
+
+
+<main class="flex flex-col flex-wrap mx-4 gap-6 mt-10 md:flex-row justify-center">
+
+
+    <!-- Game tebak angka start -->
+    <section class="group bg-slate-800/50 backdrop-blur-lg border border-slate-600 w-full md:w-100 p-8 rounded-4xl shadow-2xl transition-all duration-300 hover:border-lime-500/50 hover:shadow-lime-500/10 relative overflow-hidden">
+        <div class="absolute -top-10 -right-10 w-32 h-32 bg-lime-500/10 rounded-full blur-3xl"></div>
+        
+        <div class="relative z-10 flex flex-col gap-6">
+            <div class="space-y-2">
+                <h2 id="pesan-game" class="font-pixel text-xl text-lime-400 text-center tracking-wider drop-shadow-sm">Menunggu game dimulai....</h2>
+                <p id="display-nyawa" class="text-center font-mono text-slate-400 text-xs md:text-sm uppercase tracking-widest"></p>
+            </div>
+
+            <div class="relative">
+                <input type="tel" placeholder="1 sampai 20" id="inputTebakan"
+                    class="w-full bg-slate-900/50 border-2 border-slate-600 rounded-xl text-white p-4 outline-none focus:border-lime-500 transition-all duration-300 font-pixel text-center text-2xl placeholder:text-slate-600 placeholder:text-sm">
+            </div>
+
+            <p id="clueNumber" class="text-center text-sm font-pixel text-slate-300 min-h-6 italic"></p>
+
+            <div class="flex flex-col gap-3 md:flex-row">
+                <button id="btn-tebak" 
+                    class="flex-1 py-3 bg-lime-500 hover:bg-lime-400 text-slate-900 rounded-xl font-pixel font-bold shadow-lg shadow-lime-500/20 transform transition active:scale-95 cursor-pointer">
+                    Tebak!
+                </button>
+            
+                <button id="reset-button"
+                    class="flex-1 py-3 border-2 border-slate-600 text-slate-300 hover:bg-slate-700 rounded-xl font-pixel transform transition active:scale-95 cursor-pointer">
+                    Reset
+                </button>
+            </div>
+        </div>
+    </section>        
+    <!-- Game tebak angka end -->
+
+
+
+
+    <!-- Game ketik start -->
+    <section class="group bg-slate-800/50 backdrop-blur-lg border border-slate-600 flex-1 min-w-[320px] p-8 rounded-4xl shadow-2xl transition-all duration-300 hover:border-cyan-500/50 hover:shadow-cyan-500/10 relative overflow-hidden">
+        <div class="absolute -bottom-10 -left-10 w-40 h-40 bg-cyan-500/10 rounded-full blur-3xl"></div>
+
+        <div class="relative z-10 h-full flex flex-col justify-between gap-8">
+            <div class="space-y-6">
+                <div class="flex justify-between items-center border-b border-slate-700 pb-4">
+                    <label for="papan-ketik" class="font-pixel text-lg text-cyan-400 tracking-tight">Speed Test</label>
+                    <span id="skor-ketik" class="text-xl text-white font-pixel bg-slate-700/50 px-4 py-1 rounded-full border border-slate-600">Skor: 0</span>
+                </div>
+
+                <div class="bg-slate-900/40 p-6 rounded-2xl border border-slate-700/50 italic">
+                    <h3 id="text-display" class="text-slate-300 text-lg leading-relaxed first-letter:text-3xl first-letter:font-bold first-letter:text-cyan-400"></h3>
+                </div>
+
+                <div class="relative">
+                    <input type="text" placeholder="Ketik kalimat di atas..." id="papan-ketik"
+                        class="w-full bg-slate-900/50 border-2 border-slate-600 rounded-xl p-4 text-white outline-none focus:border-cyan-500 transition-all duration-300 font-sans text-lg">
+                </div>
+            </div>
+
+            <div class="flex items-center justify-between mt-4">
+                <div class="flex items-center gap-3 bg-slate-700/30 px-4 py-2 rounded-xl">
+                    <svg class="animate-pulse" xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 640 640">
+                        <path fill="rgb(34, 211, 238)" d="M528 320C528 434.9 434.9 528 320 528C205.1 528 112 434.9 112 320C112 205.1 205.1 112 320 112C434.9 112 528 205.1 528 320zM64 320C64 461.4 178.6 576 320 576C461.4 576 576 461.4 576 320C576 178.6 461.4 64 320 64C178.6 64 64 178.6 64 320zM296 184L296 320C296 328 300 335.5 306.7 340L402.7 404C413.7 411.4 428.6 408.4 436 397.3C443.4 386.2 440.4 371.4 429.3 364L344 307.2L344 184C344 170.7 333.3 160 320 160C306.7 160 296 170.7 296 184z"/>
+                    </svg>
+                    <span id="second-count" class="text-cyan-400 text-3xl font-pixel">00:00</span>
+                </div>
+
+                <button id="resetWord-btn" 
+                    class="px-6 py-2 border-2 border-slate-600 text-slate-300 hover:bg-slate-700 hover:text-white rounded-xl font-pixel transition-all active:scale-95 cursor-pointer">
+                    Start
+                </button>
+            </div>
+        </div>
+    </section>
+    <!-- Game ketik end  -->
+
+    <!-- Game batu  gunting kertas dimuali disni -->
+
+    <section class="group bg-slate-800/50 backdrop-blur-lg border border-slate-600 w-full md:w-100 p-8 rounded-4xl shadow-2xl transition-all duration-300 hover:border-orange-500/50 hover:shadow-orange-500/10 relative overflow-hidden">
+    <div class="absolute -top-10 -left-10 w-32 h-32 bg-orange-500/10 rounded-full blur-3xl"></div>
+    
+    <div class="relative z-10 flex flex-col gap-6">
+        <div class="space-y-2 text-center">
+            <h2 id="display-pemenang" class="font-pixel text-xl text-orange-400 tracking-wider">Batu Gunting Kertas</h2>
+            <p id="skor-suit" class="font-mono text-slate-400 text-xs uppercase tracking-widest">
+                skor kamu: <span id="angka-skor" class="font-pixel">0</span>
+                skor komputer: <span id="angka-komputer" class="font-pixel">0</span>
+                seri: <span id="seri-skor" class="font-pixel">0</span>
+            </p>
+        </div>
+
+        <div class="flex justify-around items-center bg-slate-900/60 p-4 rounded-2xl border border-slate-700 min-h-25">
+            <div class="text-center">
+                <p class="text-[10px] text-slate-500 uppercase mb-1">Kamu</p>
+                <div id="pilihan-user" class="text-3xl text-white font-pixel">?</div>
+            </div>
+            <div class="text-orange-500 font-pixel text-xl animate-pulse">VS</div>
+            <div class="text-center">
+                <p class="text-[10px] text-slate-500 uppercase mb-1">Komputer</p>
+                <div id="pilihan-komputer" class="text-3xl text-white font-pixel">?</div>
+            </div>
+        </div>
+
+        <p id="hasil-duel" class="text-center font-pixel text-slate-200 min-h-6 text-sm">Pilih senjata kamu!</p>
+
+        <div class="flex flex-wrap gap-2">
+            <button class="btn-suit flex-1 py-3 bg-slate-700 hover:bg-orange-500 hover:text-slate-900 text-white rounded-xl font-pixel transition-all active:scale-95 cursor-pointer" data-pilihan="batu">
+                Batu
+            </button>
+            <button class="btn-suit flex-1 py-3 bg-slate-700 hover:bg-orange-500 hover:text-slate-900 text-white rounded-xl font-pixel transition-all active:scale-95 cursor-pointer" data-pilihan="gunting">
+                Gunting
+            </button>
+            <button class="btn-suit flex-1 py-3 bg-slate-700 hover:bg-orange-500 hover:text-slate-900 text-white rounded-xl font-pixel transition-all active:scale-95 cursor-pointer" data-pilihan="kertas">
+                Kertas
+            </button>
+        </div>
+        
+        <button id="reset-suit" class="w-full py-2 text-xs border border-slate-700 text-slate-500 hover:bg-slate-700 hover:text-slate-300 rounded-lg font-pixel transition-all cursor-pointer                               active:scale-95">
+            Reset Score
+        </button>
+
+        <p class="font-pixel text-sm md:text-xl text-orange-500">Nyawa: <span id="nyawa-user">7</span></p>
+    </div>
+</section>
+    <!-- Game batu gunting kertas selesai -->
+
+
+    <!-- Game ratatouile -->
+    <section class="group bg-slate-800/50 backdrop-blur-lg border border-slate-600 w-full md:w-100 p-8 rounded-4xl shadow-2xl transition-all duration-300 hover:border-lime-500/50 hover:shadow-orange-500/10 relative overflow-hidden">
+        <div class="flex gap-4 justify-between">
+            <h1 class="font-pixel text-sm md:text-xl text-lime-500">Whack a mole</h1>
+
+            <p id="display-whack" class="font-pixel text-sm md:text-xl text-lime-500"></p>
+
+            <p class="font-pixel text-sm md:text-xl text-black p-2 rounded-2xl bg-lime-500">Skor:<span id="skor-whack-mole">0</span></p>
+
+
+        </div>
+
+        <div class="grid grid-cols-3 grid-row-3 gap-2 place-items-center my-4">
+            <figure class="w-25 h-25 rounded-full bg-slate-700 object-fit overflow-hidden cursor-pointer active:scale-95">
+                <img class="mole transition transform duration-200 translate-y-full" src="../Images/rat.jpeg" alt="mouse">
+            </figure>
+            <figure class="w-25 h-25 rounded-full bg-slate-700 object-fit overflow-hidden cursor-pointer active:scale-95">
+                <img class="mole transition transform duration-200 translate-y-full" src="../Images/rat.jpeg" alt="mouse">
+            </figure>
+            <figure class="w-25 h-25 rounded-full bg-slate-700 object-fit overflow-hidden cursor-pointer active:scale-95">
+                <img class="mole transition transform duration-200 translate-y-full" src="../Images/rat.jpeg" alt="mouse">
+            </figure>
+            <figure class="w-25 h-25 rounded-full bg-slate-700 object-fit overflow-hidden cursor-pointer active:scale-95">
+                <img class="mole transition transform duration-200 translate-y-full" src="../Images/rat.jpeg" alt="mouse">
+            </figure>
+            <figure class="w-25 h-25 rounded-full bg-slate-700 object-fit overflow-hidden cursor-pointer active:scale-95">
+                <img class="mole transition transform duration-200 translate-y-full" src="../Images/rat.jpeg" alt="mouse">
+            </figure>
+            <figure class="w-25 h-25 rounded-full bg-slate-700 object-fit overflow-hidden cursor-pointer active:scale-95">
+                <img class="mole transition transform duration-200 translate-y-full" src="../Images/rat.jpeg" alt="mouse">
+            </figure>
+            <figure class="w-25 h-25 rounded-full bg-slate-700 object-fit overflow-hidden cursor-pointer active:scale-95">
+                <img class="mole transition transform duration-200 translate-y-full" src="../Images/rat.jpeg" alt="mouse">
+            </figure>
+            <figure class="w-25 h-25 rounded-full bg-slate-700 object-fit overflow-hidden cursor-pointer active:scale-95">
+                <img class="mole transition transform duration-200 translate-y-full" src="../Images/rat.jpeg" alt="mouse">
+            </figure>
+            <figure class="w-25 h-25 rounded-full bg-slate-700 object-fit overflow-hidden cursor-pointer active:scale-95">
+                <img class="mole transition transform duration-200 translate-y-full" src="../Images/rat.jpeg" alt="mouse">
+            </figure>
+        </div>
+
+        <div class="flex items-center justify-between mt-4">
+                <div class="flex items-center gap-3 bg-slate-700/30 px-4 py-2 rounded-xl">
+                    <svg class="animate-pulse" xmlns="http://www.w3.org/2000/svg" height="24" width="24" viewBox="0 0 640 640">
+                        <path fill="rgb(205, 220, 57)" d="M528 320C528 434.9 434.9 528 320 528C205.1 528 112 434.9 112 320C112 205.1 205.1 112 320 112C434.9 112 528 205.1 528 320zM64 320C64 461.4 178.6 576 320 576C461.4 576 576 461.4 576 320C576 178.6 461.4 64 320 64C178.6 64 64 178.6 64 320zM296 184L296 320C296 328 300 335.5 306.7 340L402.7 404C413.7 411.4 428.6 408.4 436 397.3C443.4 386.2 440.4 371.4 429.3 364L344 307.2L344 184C344 170.7 333.3 160 320 160C306.7 160 296 170.7 296 184z"/>
+                    </svg>
+                    <span id="whack-count" class="text-lime-500 text-3xl font-pixel">00:00</span>
+                </div>
+
+                <button id="start-whack-btn" 
+                    class="px-6 py-2 border-2 border-slate-600 text-slate-300 hover:text-black hover:bg-lime-500 rounded-xl font-pixel transition-all active:scale-95 cursor-pointer">
+                    Start
+                </button>
+            </div>
+
+    </section>
+
+</main>
+
+    <script src="../main.js" defer></script>
+</body>
+</html>
+
