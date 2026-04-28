@@ -1,14 +1,15 @@
 (function () {
+    // Tangkap semua id dari html dengan get element
     const textDisplay = document.getElementById("text-display");
     const papanKetik = document.getElementById("papan-ketik");
     const skorKetik = document.getElementById("skor-ketik");
     const secondCount = document.getElementById("second-count");
     const btnResetWord = document.getElementById("resetWord-btn");
  
-    let skor = 0;
-    let kata = ["kamu", "lagi", "apa", "sekarang"];
-    let nilaiTimer = 120;
-    let intervalTime;
+    let skor = 0; /*ini skor penampung untuk supaya nanti menampung skor dalam game*/
+    let kata = ["kamu", "lagi", "apa", "sekarang"]; /*array yang berisi string untuk game ketik*/
+    let nilaiTimer = 120; /*waktu permainan tapi masih dalam bentuk bilangan bulat, 120 sama dengan 02:00 (2 menit)*/
+    let intervalTime; /*variabel interval time disini berfungsi */
  
     function tampilKata(max) {
         const acakKata = Math.floor(Math.random() * max.length);
