@@ -33,3 +33,7 @@ body {
 .masking {
     image-rendering: pixelated;
 }
+
+html {
+    scroll-behavior: smooth;
+}

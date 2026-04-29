@@ -5,21 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Belajar Tailwind</title>
     <link rel="stylesheet" href="./dist/output.css">
-
-
-    <!-- Font awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-
-    <!-- Font Pixel -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
-
-
-    <!-- Font Courier -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 
@@ -72,27 +61,50 @@
     </nav>
 </div>
 
-<!-- Main Section -->
-<main class="flex-1 flex flex-col justify-center px-6 py-10 md:py-20 md:px-24 lg:px-40">
-    <h2 class="font-prime py-2 text-white text-xl tracking-widest animate-typing w-0 overflow-hidden whitespace-nowrap md:text-5xl">
+<!-- Hero Section (kosong, siap diisi gambar pixel floating) -->
+<section class="relative flex-1 min-h-screen overflow-hidden">
+    <!-- Taruh gambar pixel floating kamu di sini -->
+    <figure>
+        <img src="./Images/pixelart.png" alt="pixel-art" class="h-70 drop-shadow-glow-green animate-float absolute top-10 left-20">
+    </figure>
+
+    <figure>
+        <img src="./Images/rockstar.png" alt="rockstar.png" class="h-70 drop-shadow-glow-green animate-float absolute top-70 left-50 rotate-45">
+    </figure>
+
+    <figure>
+        <img src="./Images/space.png" alt="" class=" drop-shadow-glow-green animate-float absolute bottom-10 left-30 rotate-45">
+    </figure>
+
+    <figure>
+        <img src="" alt="">
+    </figure>
+
+    <figure>
+        <img src="" alt="">
+    </figure>
+
+</section>
+
+
+
+<!-- About Section -->
+<section id="about" class="bg-slate-900/60 px-6 py-16 md:py-24 md:px-24 lg:px-40">
+    <h2 class="font-prime text-white text-xl tracking-widest md:text-5xl py-2">
         Hastalavista baby Production
     </h2>
-    <h3 class="font-prime text-white text-3xl tracking-widest">Game Developer</h3>
-    <div class="max-w-200">
-        <p class="font-prime text-sm md:text-xl text-slate-300 leading-relaxed ">We're happy to introduce you to our company games. Please play the games we have provided, these games we made are dedicated for you to play in your spare time without needing to download any applications. We welcome your ideas and feedback. <br> Enjoy the game!</p>
+    <h3 class="font-prime text-white text-3xl tracking-widest mb-6">Game Developer</h3>
+    <div class="max-w-2xl">
+        <p class="font-prime text-sm md:text-xl text-slate-300 leading-relaxed">
+            We're happy to introduce you to our company games. Please play the games we have provided, these games we made are dedicated for you to play in your spare time without needing to download any applications. We welcome your ideas and feedback. <br> Enjoy the game!
+        </p>
     </div>
-</main>
+</section>
 
-
-<figure>
-    <img src="./Images/pixelart.png" alt="Karakter pixel" class="masking animate-float drop-shadow-glow-green h-90 absolute right-120 bottom-65 hidden  md:block">
-</figure>
-    
-
-<footer class="bg-slate-900/70">
+<footer class="bg-slate-900">
     <div class="py-6 flex justify-between px-4 items-center text-slate-300 border-b border-slate-700">
         <p class="text-sm md:text-2xl font-prime">Game Production</p>
-        <div class="flex gap-2 md:gap-4 text-sm md:text-2xl ">
+        <div class="flex gap-2 md:gap-4 text-sm md:text-2xl">
             <div class="flex flex-col justify-center items-center">
                 <a href=""><i class="fa fa-github" aria-hidden="true"></i></a>
                 <p class="font-prime text-sm md:text-xl">Github</p>
