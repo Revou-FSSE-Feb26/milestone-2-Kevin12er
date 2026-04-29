@@ -7,7 +7,9 @@
     const btnResetWord = document.getElementById("resetWord-btn");
  
     let skor = 0; /*ini skor penampung untuk supaya nanti menampung skor dalam game*/
-    let kata = ["kamu", "lagi", "apa", "sekarang"]; /*array yang berisi string untuk game ketik*/
+    let kata = ["kamu", "lagi", "apa", "sekarang", "bagaimana", "sepertinya saya", "jangan", "marah", "sayang", "mau", "kejar",
+        "siapa", "mimpi", "jatuh", "dari", "langit", "tujuh", "hore", "memang", "menang", "jarak", "lupa", "belok", "kiri", "kanan", "atas", "bawah",
+        "iduz", "bangjek", "mas thoriq", "seoul", "revou", "fun"]; /*array yang berisi string untuk game ketik*/
     let nilaiTimer = 120; /*waktu permainan tapi masih dalam bentuk bilangan bulat, 120 sama dengan 02:00 (2 menit)*/
     let intervalTime; /*variabel interval time disini berfungsi */
  
