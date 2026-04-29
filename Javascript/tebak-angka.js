@@ -59,7 +59,6 @@
  
         ruangTebak.value = "";
         ruangTebak.focus();
-        console.log(`Game berhasil direset, nyawa kembali ${nyawa}`);
     });
  
     ruangTebak.addEventListener("keypress", function (event) { /*pengaktifan keyboard "Enter" untuk tombol tebak*/

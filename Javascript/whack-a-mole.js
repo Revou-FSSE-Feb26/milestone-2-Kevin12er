@@ -97,7 +97,6 @@
                 img.classList.add("translate-y-full");
                 score++;
                 skorWhackMole.textContent = score;
-                console.log("Skor harusnya nambah!");
             }
         });
     });
