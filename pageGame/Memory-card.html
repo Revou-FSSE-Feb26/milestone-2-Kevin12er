@@ -16,7 +16,7 @@
 
 
 
-<body class="bg-cover bg-no-repeat bg-blend-multiply bg-slate-700 min-h-screen">
+<body class="bg-cover bg-no-repeat bg-blend-multiply bg-slate-700 min-h-screen relative">
 
 	<h1 class="font-pixel text-slate-300 text-sm md:text-3xl text-center py-8">Memory Card Game</h1>
 
@@ -30,15 +30,16 @@
 
 	<div>
 		<div>
-			<button id="btn-start" class="">Start</button>
-			<button id="btn-reset">Reset</button>
+			<button id="btn-start" class="text-black bg-cyan-500 p-2 rounded-xl cursor-pointer active:scale-95">Start</button>
+			<button id="btn-reset" class="text-black bg-lime-500 p-2 rounded-xl cursor-pointer active:scale-95">Reset</button>
 		</div>
-
-		<span id="countdown" class="text-cyan-400 text-3xl font-pixel">00:00</span>
-
 	</div>
+
+	<span id="countdown" class="text-cyan-400 text-3xl font-pixel absolute top-10 left-10 ">00:00</span>
 
 
 	
+
+	<script src="../Javascript/Memory-card.js"></script>
 </body>
 </html>
