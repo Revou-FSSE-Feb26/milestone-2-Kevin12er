@@ -8,59 +8,44 @@
 	const gameBoard = document.getElementById("game-board");
 
 
-	// let countdownFlip = setTimeout(function() { 
-	// 	console.log("Countdown is running");
-	// }, 1000);
+	// btnStart.addEventListener(function() {
+
+	// })
 
 
-	let timeOut = 300
-	// let timer = setInterval(function() {
-	// 	console.log("Timer waktu berjalan");
-	// 	timeOut--
+	// concatenation of Array/ sambungkan 10 array kebelekang
+	let chainCards = function(card) {
+		let c = card.length
+		let newChain = [];
 
-	// 	if (timeOut <= 0) {
-	// 		clearInterval(timer)
-	// 		console.log("waktu habis")
-	// 	}
-	// }, 1000)
-
-	function copyCards(cards) {
-		let copyCards = []; /*saya menyediakan sebuah variabel penampung yang nantinya akan direturn oleh function copyCards ini*/
-
-
-		// hasil dari code challenge yang saya pakai untuk chaining array yang sama dibarisan belakang (duplikat) menggunakan concatenation of array 
-		for (let i = 0; i < cards.length; i++) {	/*perulangan loop biasa*/
-			const n = cards.length					/*saya masukan kedalam sebuah variabel baru biar tinggal panggil pakai n nggak cards.length, capek kalo panjang*/
-			copyCards[i] = cards[i]					/*disini artinya nilainya sama, disinilah sebuah variabel baru itu mendapatkan hasil copian dari cards (array) karena "="*/
-			copyCards[n + i] = cards[i]
+		for (let i = 0; i < c; i++) {
+			newChain[i] = card[i];
+			newChain[i + c] = card[i];
 		}
-		return copyCards; /*inilah hasil atau nilai dari sebuah function yang saya buat muehehee*/
+		return newChain
 	}
 
-	
-	function shuffleCards(shuffle) {
-		return shuffle.sort(() => Math.random() - 0.5)
+	// Function shuflle cards
+	function shuffleCards(item) {
+		item.sort(() => Math.random() - 0.5)
+		return item;
 	}
 
+	btnStart.addEventListener("click", function() {
+		let cardIsReady = chainCards(cards);
+		let randomCard = shuffleCards(cardIsReady);
+		gameBoard.innerHTML = "";
 
+		randomCard.forEach(function(item) {
+			const cardBox = document.createElement("div");
+			cardBox.className = "border border-slate-700 bg-slate-500 rounded-2xl cursor-pointer aspect-square h-70 w-full";
+			
 
-	function render() {
-		gameBoard.innerHTML = cards.map(gambar, i) => ``
-	}
+			
+			gameBoard.appendChild(cardBox)
+		})
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+	})
 
 
 
