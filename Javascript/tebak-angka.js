@@ -29,7 +29,7 @@
         } else {
             nyawa -= 1; /*jika jawaban masih salah maka kurangi nyawa*/
             if (tebakan > 20) {
-                clue.textContent = "Kejauhan Pak mainnya, baca clue dong sayang"; /*clue untuk angka yang lebih dari jangkauan*/
+                clue.textContent = "Kejauhan Pak mainnya"; /*clue untuk angka yang lebih dari jangkauan*/
             } else if (tebakan > 17) {
                 clue.textContent = "Sudah mendekati, semangat"; /*clue jika sudah mendekati*/
             } else {

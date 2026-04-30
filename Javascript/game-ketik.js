@@ -61,14 +61,18 @@
                 nilaiTimer = 120; /*waktu balik menjadi 2 menit */
                 textDisplay.textContent = `Game Selesai skor kamu: ${skor}`; /*update skor di UI*/
                 setTimeout(function () { /*ini adalh waktu berapa lama text game selesai di display tampil di UI dan diganti sama text display dibawah*/
-                    if (skor >= 45) {
-                        textDisplay.textContent = `leh uga nih cepet banget`;
-                    } else if (skor >= 30) {
-                        textDisplay.textContent = `ya lumayan daripada lumanyun`;
-                    } else if (skor >= 20) {
-                        textDisplay.textContent = "hmmm gimana yee ? kurang gan, lebih cepet dong";
-                    } else {
-                        textDisplay.textContent = "niat maen ga sih";
+                    switch (true) {
+                    case (skor >= 45):
+                        textDisplay.textContent = "Cepat Banget";
+                        break;
+                    case (skor >= 30):
+                        textDisplay.textContent = "Lumayan cepat! teruskan";
+                        break;
+                    case (skor >= 20):
+                        textDisplay.textContent = "Kurang Cepat";
+                        break;
+                    default:
+                        textDisplay.textContent = "Kamu Lambat";
                     }
                 }, 2000);
             }
