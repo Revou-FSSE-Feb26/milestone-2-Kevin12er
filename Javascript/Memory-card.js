@@ -72,7 +72,7 @@
 
         randomCard.forEach(function(item) {
             const cardBox = document.createElement("div");
-            cardBox.className = "border border-slate-700 bg-slate-500 rounded-2xl cursor-pointer drop-shadow-glow-green active:scale-95 aspect-square overflow-hidden h-70 w-full flex items-center justify-center ";
+            cardBox.className = "border border-slate-700 bg-slate-500 rounded-2xl cursor-pointer drop-shadow-glow-green active:scale-95 aspect-square overflow-hidden h-40 md:h-70 w-full flex items-center justify-center ";
             cardBox.dataset.karakter = item;
 
             cardBox.addEventListener("click", function() {
