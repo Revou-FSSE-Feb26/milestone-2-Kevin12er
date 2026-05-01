@@ -21,7 +21,6 @@ This project is a collection of interactive web-based games. Each game is design
 - **JavaScript**: For implementing game logic and interactivity.
 
 ## Route Folder
-- **Assets/**: Contains additional assets used in the project.
 - **Images/**: Stores images used across the project.
 - **Javascript/**: Contains JavaScript files for each game:
   - game-ketik.js

@@ -1,51 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="UTF-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Memory Card Game</title>
-	<link rel="stylesheet" href="../dist/output.css">
-
-	<!-- Font pixel -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Card Game</title>
+    <link rel="stylesheet" href="../dist/output.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400..700&display=swap" rel="stylesheet">
-    <!-- Font pixel -->
+    <link href="https://fonts.googleapis.com/css2?family=Courier+Prime:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
 </head>
 
+<body class="bg-cover bg-no-repeat bg-blend-multiply bg-slate-700 min-h-screen flex flex-col">
 
+    <!-- Header -->
+    <div class="flex justify-between items-center px-6 pt-4 pb-2">
+        <span id="countdown" class="text-cyan-400 text-2xl font-pixel">00:00</span>
+        <h1 class="font-pixel text-slate-300 text-sm md:text-3xl text-center">Memory Card Game</h1>
+        <div class="flex gap-2">
+            <button id="btn-start" class="text-black bg-cyan-500 px-4 py-2 cursor-pointer active:scale-95 hover:drop-shadow-glow-green font-pixel text-sm">Start</button>
+            <button id="btn-reset" class="text-black bg-lime-500 px-4 py-2 cursor-pointer active:scale-95 hover:drop-shadow-glow-green font-pixel text-sm">Reset</button>
+        </div>
+    </div>
 
+    
+    <div class="flex justify-center overflow-hidden mb-4">
+        <h2 id="display-game" class="text-white text-sm md:text-xl font-prime whitespace-nowrap">
+            Tekan Start untuk mulai
+        </h2>
+    </div>
 
-<body class="bg-cover bg-no-repeat bg-blend-multiply bg-slate-700 min-h-screen relative">
+   
+    <main id="game-board" class="flex-1 grid grid-cols-5 md:grid-cols-10 gap-2 md:gap-4 px-4 md:px-8 content-start">
+    </main>
 
-	<h1 class="font-pixel text-slate-300 text-sm md:text-3xl text-center py-8">Memory Card Game</h1>
-
-	<h2 id="display-game">Tekan Start untuk mulai</h2>
-
-	<main id="game-board" class="grid grid-cols-5 grid-row-4 gap-2 mx-4
-				 md:grid-cols-10 grid-rows-2 md:place-items-center md:gap-4 md:mx-8">
-
-
-	</main>
-
-	<div>
-		<div>
-			<button id="btn-start" class="text-black bg-cyan-500 px-4 py-2 cursor-pointer active:scale-95 absolute right-30 top-10 md:top-10 md:left-40 md:right-auto w-fit hover:drop-shadow-glow-green">Start</button>
-			<button id="btn-reset" class="text-black bg-lime-500 px-4 py-2  cursor-pointer active:scale-95 absolute right-10 top-10 md:top-10 md:left-60 md:right-auto w-fit hover:drop-shadow-glow-green">Reset</button>
-		</div>
-	</div>
-
-	<span id="countdown" class="text-cyan-400 text-3xl font-pixel absolute top-10 left-10 ">00:00</span>
-
-
-	 <!-- Tombol back to home -->
-    <div class="flex justify-center px-6 pb-8 absolute bottom-1">
+    <!-- Back to Home -->
+    <div class="flex justify-center py-6">
         <a href="../index.html">
-            <button id="start-btn" class="relative group focus:outline-none transition duration-100 active:translate-y-1 cursor-pointer">
+            <button class="relative group focus:outline-none transition duration-100 active:translate-y-1 cursor-pointer">
                 <div class="absolute -inset-1.5 bg-slate-950 rounded-none border-t-0 border-l-0"></div>
                 <div class="absolute -inset-0.5 bg-cyan-400 rounded-none border-t-0 border-l-0"></div>
-                <div class="relative bg-slate-900 px-6 py-3 rounded-none border-2 border-slate-950 
-                    border-t-cyan-100 border-l-cyan-100 
+                <div class="relative bg-slate-900 px-6 py-3 rounded-none border-2 border-slate-950
+                    border-t-cyan-100 border-l-cyan-100
                     border-b-cyan-600 border-r-cyan-600">
                     <span class="font-pixel text-lg text-cyan-100 tracking-wider group-hover:text-cyan-400 transition-colors">
                         BACK TO HOME
@@ -54,8 +50,7 @@
             </button>
         </a>
     </div>
-	
 
-	<script src="../Javascript/Memory-card.js"></script>
+    <script src="../Javascript/Memory-card.js"></script>
 </body>
 </html>
