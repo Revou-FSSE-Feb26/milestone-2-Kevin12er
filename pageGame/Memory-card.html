@@ -30,14 +30,30 @@
 
 	<div>
 		<div>
-			<button id="btn-start" class="text-black bg-cyan-500 px-4 py-2 cursor-pointer active:scale-95 absolute top-10 left-40 hover:drop-shadow-glow-green">Start</button>
-			<button id="btn-reset" class="text-black bg-lime-500 px-4 py-2  cursor-pointer active:scale-95 absolute top-10 left-60 hover:drop-shadow-glow-green">Reset</button>
+			<button id="btn-start" class="text-black bg-cyan-500 px-4 py-2 cursor-pointer active:scale-95 absolute right-30 top-10 md:top-10 md:left-40 md:right-auto w-fit hover:drop-shadow-glow-green">Start</button>
+			<button id="btn-reset" class="text-black bg-lime-500 px-4 py-2  cursor-pointer active:scale-95 absolute right-10 top-10 md:top-10 md:left-60 md:right-auto w-fit hover:drop-shadow-glow-green">Reset</button>
 		</div>
 	</div>
 
 	<span id="countdown" class="text-cyan-400 text-3xl font-pixel absolute top-10 left-10 ">00:00</span>
 
 
+	 <!-- Tombol back to home -->
+    <div class="flex justify-center px-6 pb-8 absolute bottom-1">
+        <a href="../index.html">
+            <button id="start-btn" class="relative group focus:outline-none transition duration-100 active:translate-y-1 cursor-pointer">
+                <div class="absolute -inset-1.5 bg-slate-950 rounded-none border-t-0 border-l-0"></div>
+                <div class="absolute -inset-0.5 bg-cyan-400 rounded-none border-t-0 border-l-0"></div>
+                <div class="relative bg-slate-900 px-6 py-3 rounded-none border-2 border-slate-950 
+                    border-t-cyan-100 border-l-cyan-100 
+                    border-b-cyan-600 border-r-cyan-600">
+                    <span class="font-pixel text-lg text-cyan-100 tracking-wider group-hover:text-cyan-400 transition-colors">
+                        BACK TO HOME
+                    </span>
+                </div>
+            </button>
+        </a>
+    </div>
 	
 
 	<script src="../Javascript/Memory-card.js"></script>
