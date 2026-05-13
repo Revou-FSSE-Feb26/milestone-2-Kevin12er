@@ -1,3 +1,6 @@
+import { formatTime } from "./utils.js"
+
+
 (function () {
     // 1. DATA & VARIABLE
     const cards = ["brook1.jpeg", "choper.jpeg", "franky.jpeg", "jinbe.jpeg", "luffy1.jpg", "nami.jpeg", "robin.jpeg", "usop1.jpeg", "zorro3.jpeg", "vinsmoke.jpeg"];
@@ -13,11 +16,7 @@
     // 2. FUNGSI STATIS 
     const chainCards = (cardArray) => [...cardArray, ...cardArray];
     const shuffleCards = (array) => array.sort(() => Math.random() - 0.5);
-    const formatTime = (secs) => {
-        const menit = Math.floor(secs / 60);
-        const detik = secs % 60;
-        return String(menit).padStart(2, "0") + ":" + String(detik).padStart(2, "0");
-    };
+ 
 
     const resetBoard = () => {
         firstCard = null;

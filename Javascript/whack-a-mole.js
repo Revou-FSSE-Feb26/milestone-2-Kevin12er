@@ -1,3 +1,6 @@
+import { formatTime } from "./utils.js";
+
+
 (function () {
     const skorWhackMole = document.getElementById("skor-whack-mole");
     const startWhackBtn = document.getElementById("start-whack-btn");
@@ -10,11 +13,8 @@
     let score = 0; /*skor awal game*/
     let isGameActive = false; /*game default*/
  
-    function updateTimer() { /*pengkonversian waktu dari 120 menjadi 02:00 style menit dan detik*/
-        const menit = Math.floor(countdownMole / 60);
-        const detik = countdownMole % 60;
-        whackCount.textContent =
-            String(menit).padStart(2, "0") + ":" + String(detik).padStart(2, "0");
+    function updateTimer() { 
+        whackCount.textContent = formatTime(countdownMole);
     }
  
     function whackTimer() {

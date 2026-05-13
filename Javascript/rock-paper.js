@@ -21,7 +21,6 @@
             if (nyawamu === 0) return; /*jika nyawa 0 maka return hasilnya siapa yang menang*/
  
             const userChoice = this.dataset.pilihan;
-            console.log(`kamu memilih: ${userChoice}`);
  
             const opsiAcak = Math.floor(Math.random() * opsiKomputer.length); /*supaya komputer memilihnya acak cuma gatau kenapa komputernya menang terus bjir*/
             const compChoice = opsiKomputer[opsiAcak];
