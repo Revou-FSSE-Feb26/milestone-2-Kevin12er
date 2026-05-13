@@ -23,18 +23,18 @@ This project is a collection of interactive web-based games. Each game is design
 ## Route Folder
 - **Images/**: Stores images used across the project.
 - **Javascript/**: Contains JavaScript files for each game:
-  - game-ketik.js
+  - typing-game.js
   - Memory-card.js
   - rock-paper.js
-  - tebak-angka.js
+  - guess-number.js
   - whack-a-mole.js
 
 - **pageGame/**: Contains HTML files for each game:
-  - game-ketik.html
+  - typing-game.html
   - Memory-card.html
   - pageGame.html
   - rock-papper-scissors.html
-  - tebak-angka.html
+  - guess-number.html
   - whack-a-mole.html
 
 **demo links**
